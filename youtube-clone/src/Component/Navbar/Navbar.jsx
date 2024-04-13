@@ -8,12 +8,12 @@ import more_icon from '../../assets/assets/more.png'
 import notification_icon from '../../assets/assets/notification.png'
 import profile_icon from '../../assets/assets/jack.png'
 
-const Navbar = () => {
+const Navbar = ({setSidebar}) => {
     return (
         <div>
             <nav className='flex-div'>
                 <div className="nav-left flex-div">
-                    <img className='menu-icon' src={menu_icon} alt=''></img>
+                    <img className='menu-icon' onClick={()=>setSidebar(prev=>prev===false?true:false)} src={menu_icon} alt=''></img>
                     <img className='logo' src={logo} alt=''></img>
                 </div>
 
